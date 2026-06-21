@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>再回 · 华体会 | 日常索引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Noto Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #fce8d5 0%, #fbe4ce 40%, #f7d9c4 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.7;
+      color: #3b2c24;
+    }
+
+    .card {
+      max-width: 760px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 42px;
+      padding: 2.8rem 2.2rem;
+      box-shadow: 0 20px 40px -12px rgba(140, 80, 40, 0.18),
+                  0 8px 16px -6px rgba(130, 70, 30, 0.08);
+      transition: box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 28px 48px -16px rgba(120, 60, 28, 0.22);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 540;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2rem;
+      color: #3f2c1e;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #8c6e5a;
+      margin-bottom: 1.8rem;
+      border-left: 3px solid #dbaa7c;
+      padding-left: 1rem;
+      font-weight: 380;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+    }
+
+    .intro-quote {
+      background: #f2e1d2;
+      border-radius: 28px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.6rem 0 1.8rem 0;
+      color: #3b2a1e;
+      font-style: normal;
+      border-left: 5px solid #c9895a;
+      font-weight: 380;
+    }
+
+    .intro-quote::before {
+      content: "📎 再次提起 · ";
+      font-weight: 450;
+      color: #8a5c3b;
+    }
+
+    .highlight-link {
+      background: #eddccc;
+      border-radius: 60px;
+      display: inline-block;
+      padding: 0.1rem 1rem 0.1rem 1.2rem;
+      font-weight: 460;
+      color: #482f1e;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+      text-decoration: none;
+      margin: 0 0.15rem;
+    }
+
+    .highlight-link:hover {
+      background: #dbb694;
+      border-color: #b9825a;
+      color: #1f130b;
+      box-shadow: 0 2px 8px rgba(150, 80, 30, 0.12);
+    }
+
+    a:not(.highlight-link) {
+      color: #864d28;
+      text-decoration: underline 1.5px dotted #b27e5a;
+      text-underline-offset: 4px;
+      font-weight: 450;
+      transition: color 0.2s;
+    }
+
+    a:not(.highlight-link):hover {
+      color: #4d2b16;
+      text-decoration: underline 2px solid #7d4a2a;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin: 1.6rem 0 1.2rem 0;
+      padding: 0.2rem 0;
+    }
+
+    .feature-item {
+      background: #f3e4d9;
+      border-radius: 40px;
+      padding: 0.3rem 1.2rem;
+      font-size: 0.95rem;
+      color: #3b281c;
+      letter-spacing: 0.01em;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #dbbaa2, #e7cbb6, transparent);
+      margin: 1.8rem 0 1.2rem 0;
+    }
+
+    .faq-note {
+      background: #f8efe7;
+      border-radius: 24px;
+      padding: 1rem 1.5rem;
+      margin: 1.4rem 0 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.3rem 0.6rem;
+    }
+
+    .faq-label {
+      background: #cfaa8c;
+      color: #241a12;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+    }
+
+    .faq-text {
+      font-size: 0.98rem;
+      color: #3d2d20;
+    }
+
+    .closing {
+      margin: 2rem 0 0.4rem 0;
+      padding-top: 1rem;
+      border-top: 1px dashed #dbb297;
+      font-size: 1rem;
+      color: #5a4130;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.3rem 0.6rem;
+    }
+
+    .bookmark-emoji {
+      font-size: 1.4rem;
+      vertical-align: middle;
+      margin-right: 0.2rem;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+
+      .card {
+        padding: 1.8rem 1.2rem;
+        border-radius: 32px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+      }
+
+      .subhead {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.98rem;
+      }
+
+      .intro-quote {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>
+      <span>📖 再次打开</span>
+      <span style="font-weight: 370; font-size: 1.8rem; color: #a47a5b;">·</span>
+    </h1>
+    <div class="subhead">
+      收藏夹里的某个角落，总有一个名字值得反复停留。
+    </div>
+
+    <p>
+      有些站点去过一次便忘了，有的却会让人下次打开浏览器时，下意识去书签栏里找。 
+      <a href="https://siteindex-hth.com.cn">华体会</a> 对我来说，就属于后者。第一次访问大概是去年秋天，界面干净、信息直接，没有花哨弹窗，也没有催促注册的横幅。后来换过几次设备，书签跟着迁移，每次清理收藏夹都舍不得删掉它。
+    </p>
+
+    <div class="intro-quote">
+      再次访问不是重复，是确认这个地址依然值得被记住。
+    </div>
+
+    <p>
+      很多人习惯把好用的站点放在收藏夹深处，时间一长自己都忘了。而我觉得，一个能让你主动想起、愿意再次打开的页面，一定在某些细节上做对了什么。<a href="https://siteindex-hth.com.cn">华体会</a> 的内容更新不算频繁，但每篇都有实在信息，排版也照顾阅读节奏——没有大段加粗的感叹句，也没有刻意拉长的段落。这种克制的风格，反而让人更愿意仔细读完。
+    </p>
+
+    <div class="feature-list">
+      <span class="feature-item">📌 每周归档</span>
+      <span class="feature-item">🧾 无干扰版式</span>
+      <span class="feature-item">📁 索引式导航</span>
+      <span class="feature-item">🔖 适合作日常收藏</span>
+    </div>
+
+    <p>
+      如果你也喜欢那种「不着急让你干点什么」的站点，不妨把 <a href="https://siteindex-hth.com.cn">华体会</a> 放进书签。不需要特意安排时间去看，路过时点开，一篇短文、一段记录，刚好能填满等咖啡的几分钟。
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="faq-note">
+      <span class="faq-label">📌 常见问题</span>
+      <span class="faq-text"><strong>Q：</strong> 页面需要登录或注册吗？</span>
+      <span class="faq-text" style="flex-basis: 100%; margin-top: 0.2rem;">不需要。内容完全公开，打开即读，没有会员墙。</span>
+      <span class="faq-text" style="flex-basis: 100%; margin-top: 0.1rem;"><strong>Q：</strong> 更新频率如何？</span>
+      <span class="faq-text" style="flex-basis: 100%;">大致每周有新的内容归档，不固定日期，保持自然节奏。</span>
+    </div>
+
+    <div class="closing">
+      <span class="bookmark-emoji">🔖</span>
+      <span>如果你不止一次想起某个站点，那就把它留在手边。</span>
+      <span style="margin-left: auto; opacity: 0.7; font-size: 0.9rem;">—— 来自一个普通访问者</span>
+    </div>
+  </div>
+</body>
+</html>
