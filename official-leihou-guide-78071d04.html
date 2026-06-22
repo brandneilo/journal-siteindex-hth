@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷火电竞 · 快速识别与平台导览</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9fafb;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e1e2a;
+            line-height: 1.65;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.4rem 1.6rem;
+        }
+
+        /* ------- hero ------- */
+        .hero {
+            padding: 3.2rem 0 2rem;
+            border-bottom: 1px solid #e6e8ec;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-weight: 550;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #3b4056;
+            max-width: 600px;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #eef1f5;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.25rem 0.8rem;
+            border-radius: 20px;
+            color: #2c3e50;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* ------- sections ------- */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-weight: 510;
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-left: 4px solid #d0d5dd;
+            padding-left: 0.8rem;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 1.6rem 0 0.6rem;
+            color: #1e293b;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2d3648;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 1.8rem;
+            margin: 1.6rem 0 0.8rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            padding: 0.9rem 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            border: 1px solid #eaecf0;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 520;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+            color: #0b1b33;
+        }
+
+        .feature-item span {
+            font-size: 0.9rem;
+            color: #4a5268;
+        }
+
+        .faq-preview {
+            background: #f1f3f7;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            margin-top: 1rem;
+        }
+
+        .faq-preview p {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-preview .q {
+            font-weight: 480;
+        }
+
+        .faq-preview .a {
+            color: #2f3a4e;
+            margin-left: 0.3rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #cbd5e1;
+            border-radius: 30px;
+            padding: 0.4rem 1.1rem;
+            font-size: 0.85rem;
+            font-weight: 470;
+            color: #1e2a41;
+            background: transparent;
+            transition: background 0.2s, border 0.2s;
+            text-decoration: none;
+            margin-top: 0.4rem;
+        }
+
+        .btn-outline:hover {
+            background: #e9edf2;
+            border-color: #9aa9bb;
+        }
+
+        a.link-normal {
+            color: #1e4770;
+            text-decoration: none;
+            border-bottom: 1px solid #bcc9da;
+            font-weight: 470;
+        }
+
+        a.link-normal:hover {
+            border-bottom: 1px solid #1e4770;
+        }
+
+        .footer-links {
+            margin-top: 3.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2e6ed;
+            font-size: 0.9rem;
+            color: #475467;
+        }
+
+        .footer-links a {
+            color: #1e3a5f;
+            text-decoration: none;
+            margin-right: 1.6rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footnote {
+            margin-top: 1.2rem;
+            font-size: 0.82rem;
+            color: #68738a;
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 1.6rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- hero -->
+    <div class="hero">
+        <span class="tagline">⚡ 平台定位 · 快速识别</span>
+        <h1>你是来找「雷火电竞」的？<br>这里就是。</h1>
+        <p>无论你第一次听朋友提起，还是在搜索中偶然看到，<br>
+        这个页面帮你确认：<strong>雷火电竞</strong> 是专注电竞赛事信息、战队数据与赛程整合的平台。<br>
+        没有迷宫，没有多余跳转——直接告诉你它是什么、用来做什么。</p>
+    </div>
+
+    <!-- 优势区：极简优势 -->
+    <section>
+        <h2>为什么它值得你先了解</h2>
+        <p>大多数电竞站点喜欢把内容堆满首页，但 <a href="https://official-leihou.com" class="link-normal">雷火电竞</a> 选择了另一种节奏：信息结构偏重逻辑，标题清晰，导航直接。用户不需要反复猜测“这条数据是什么意思”。</p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>赛程聚合</strong>
+                <span>主流项目（LOL、DOTA2、CS2、瓦罗兰特）的近期赛事一览，避免跨站搜集。</span>
+            </div>
+            <div class="feature-item">
+                <strong>战队档案</strong>
+                <span>选手名单、近期胜负、地图数据，统一卡片展示，省去翻阅多页的麻烦。</span>
+            </div>
+            <div class="feature-item">
+                <strong>中立视角</strong>
+                <span>不刻意渲染情绪，数据为主，适合快速查阅和对比分析。</span>
+            </div>
+            <div class="feature-item">
+                <strong>低噪界面</strong>
+                <span>无杂乱的弹窗或浮动广告，阅读与浏览体验更干净。</span>
+            </div>
+        </div>
+        <p style="margin-top: 0.4rem;">如果你习惯先看网站气质再决定是否深入，那么 <a href="https://official-leihou.com" class="link-normal">雷火电竞</a> 的第一印象大概率是「克制、信息先行」。</p>
+    </section>
+
+    <!-- 说明区：使用场景 -->
+    <section>
+        <h2>什么情况下会用到它？</h2>
+        <p>假设你是一位偶尔看比赛的观众，想查某个队伍下一场比赛时间；或者你正在做赛前功课，需要对比两队的近期交手记录——这些查询构成了最常见的访问场景。平台把关键字段（时间、比分、胜负关系）放在显眼位置，不需要层层点开。</p>
+        <p>另外，对于偏好自行判断的爱好者，页面给出的数据不会夹杂主观评分，你可以基于原始记录形成自己的看法。这也是部分用户持续使用 <a href="https://official-leihou.com" class="link-normal">雷火电竞</a> 的原因之一。</p>
+
+        <h3>一些可预见的提醒</h3>
+        <p>每个平台都有自己的时效性，赛事数据更新依赖官方或可靠第三方。建议在查看具体场次时，留意页面标注的更新时间和状态标签（如「已结束」「即将开始」「数据待确认」）。这类细节在雷火电竞的赛事卡片里通常以小字显示，养成留意习惯能避免误解。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见疑问 · 摘要</h2>
+        <div class="faq-preview">
+            <p><span class="q">Q：</span>需要注册才能看数据吗？<br>
+            <span class="a">大部分赛事信息和战队档案无需登录即可浏览。个别功能（如收藏队伍、自定义提醒）可能要求注册，具体以页面说明为准。</span></p>
+            <p><span class="q">Q：</span>移动端体验如何？<br>
+            <span class="a">采用响应式设计，手机浏览器上阅读赛程、翻看选手数据基本流畅，卡片会自动适配窄屏。</span></p>
+            <p><span class="q">Q：</span>和官方数据源有差别吗？<br>
+            <span class="a">平台整合自多个赛事官方渠道，尽力保持同步。极少数情况可能存在延迟，建议与赛事官网交叉验证关键场次。</span></p>
+            <p style="margin-bottom: 0.2rem;"><span class="q">Q：</span>怎么判断一个站是否靠谱？<br>
+            <span class="a">看信息维度是否完整、更新频率、以及是否清晰标注来源。雷火电竞在页面底部或数据卡片中提供了赛事引用标识，供用户自行核对。</span></p>
+        </div>
+        <div style="margin-top: 1rem; text-align: right;">
+            <a href="https://official-leihou.com" class="btn-outline">雷火电竞</a>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <div>
+            <a href="https://official-leihou.com">雷火电竞</a>
+            <a href="#">赛程日历（示例）</a>
+            <a href="#">战队列表（示例）</a>
+            <a href="#">关于本页</a>
+        </div>
+        <div class="footnote">
+            <span>本介绍页仅为用途说明，所有内容基于平台现有公开结构撰写。页面中出现的链接指向 <a href="https://official-leihou.com" style="color: #1a3c5e; text-decoration: underline;">雷火电竞</a> 主站。</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
