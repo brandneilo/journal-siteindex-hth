@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷火电竞 · 轻叙页</title>
+    <style>
+        /* 极简留白 · 窄正文 · 柔和基调 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafbfc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2329;
+            line-height: 1.7;
+            padding: 2.4rem 1.2rem 3.6rem;
+        }
+
+        .page {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 0.5rem;
+        }
+
+        /* 导航 — 极简行式 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.75rem 0 1.8rem;
+            border-bottom: 1px solid #e3e8ee;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .top-nav .brand {
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #2c3e50;
+        }
+
+        .top-nav .tagline {
+            font-size: 0.9rem;
+            color: #6b7a8b;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.2rem;
+            color: #151b22;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin: 2.6rem 0 1rem 0;
+            color: #1e272e;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #eef2f6;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #2a3a47;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #2d3741;
+        }
+
+        .text-muted {
+            color: #5f6c7c;
+        }
+
+        /* 卡片场景模块 — 无边框柔和浮动 */
+        .scene-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin: 1.8rem 0 2.2rem;
+        }
+
+        .scene-card {
+            background: #ffffff;
+            padding: 1.6rem 1.8rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 20, 30, 0.04);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .scene-card:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 20, 30, 0.06);
+        }
+
+        .scene-card .emoji-deco {
+            font-size: 1.7rem;
+            display: inline-block;
+            margin-right: 0.4rem;
+            vertical-align: middle;
+        }
+
+        .scene-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .scene-card p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        /* 常见说明块 — FAQ 摘要 */
+        .faq-block {
+            margin: 2.8rem 0 1.8rem;
+            background: #f4f7fa;
+            padding: 1.6rem 1.8rem;
+            border-radius: 20px;
+        }
+
+        .faq-block dt {
+            font-weight: 500;
+            margin-top: 1.2rem;
+            margin-bottom: 0.3rem;
+            color: #1f2a34;
+            font-size: 1rem;
+        }
+
+        .faq-block dt:first-of-type {
+            margin-top: 0.2rem;
+        }
+
+        .faq-block dd {
+            margin-left: 0.2rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #d0dae8;
+            color: #3d4a58;
+            font-size: 0.94rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 链接风格 — 自然嵌入 */
+        a {
+            color: #1e5f8a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.2s;
+            font-weight: 430;
+        }
+
+        a:hover {
+            border-bottom-color: #1e5f8a;
+            color: #0b3b5c;
+        }
+
+        .inline-link-highlight {
+            background: #f0f4fb;
+            padding: 0 0.2rem;
+            border-radius: 3px;
+        }
+
+        /* 页面底部小字 */
+        .footer-note {
+            margin-top: 4rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #e6ecf2;
+            font-size: 0.85rem;
+            color: #68768a;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 460px) {
+            body {
+                padding: 1.6rem 0.8rem 2.8rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+
+            .scene-card {
+                padding: 1.3rem 1.2rem;
+            }
+
+            .faq-block {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <span class="brand">雷火电竞 · 随笔</span>
+        <span class="tagline">从观赛到思路</span>
+    </nav>
+
+    <!-- hero 区：温和引入，非硬广 -->
+    <h1>电竞与日常<br>一种轻量的陪伴</h1>
+    <p>
+        许多人聊起电子竞技，首先想到的是激烈的对抗和紧绷的神经。但在另一种视角里，
+        它更像一种节奏——你可以在比赛回合间喝杯茶，也可以在复盘时发现有趣的决策逻辑。
+        今天的话题围绕「<strong>雷火电竞</strong>」这个符号展开，不是因为它多么宏大，
+        而是因为它恰好代表了竞技世界里那些值得细品的切面。
+    </p>
+
+    <!-- 核心介绍 —— 以主题内容展开 -->
+    <h2>从旁观到理解</h2>
+    <p>
+        竞技的乐趣往往藏在细节里：一次地图资源的交换、一套阵容的克制关系、甚至是选手在高压下的转线思路。
+        无论你关注的是团队配合还是个人操作，<a href="https://web-leihouesports.com">雷火电竞</a>
+        所承载的内容生态，常常会提供一些让人停下来想一想的角度。
+        它不负责定义什么是“最好的”，而是持续记录和梳理那些值得被讲述的比赛片段、趋势与观点。
+    </p>
+    <p>
+        如果你也习惯在空闲时看一两场回放，或者只是对游戏背后的策略感到好奇，
+        这种不带包袱的观察方式或许能带来一些新的体感。
+    </p>
+
+    <!-- 三个场景模块 —— 各自独立但统一在「轻内容」基调下 -->
+    <h2>三种常见场景</h2>
+    <div class="scene-grid">
+        <div class="scene-card">
+            <h3><span class="emoji-deco">⚡</span> 赛前 · 信息梳理</h3>
+            <p>版本变动、队伍近期状态、选手的英雄池偏移——这些信息看似琐碎，却像拼图一样构成赛前的基本面。不需要成为分析师，也能享受拼凑线索的乐趣。</p>
+        </div>
+        <div class="scene-card">
+            <h3><span class="emoji-deco">📋</span> 赛后 · 复盘笔记</h3>
+            <p>一场比赛的胜负往往在十分钟内就埋下伏笔。回头看看关键决策点，比如换线时机、龙团站位、视野布控，常常比胜负本身更有启发。</p>
+        </div>
+        <div class="scene-card">
+            <h3><span class="emoji-deco">🌿</span> 日常 · 轻交流</h3>
+            <p>和朋友聊比赛、看战术解析、甚至只是一边做家务一边听赛事播报——电竞可以是一种背景音，也是连接话题的微小纽带。</p>
+        </div>
+    </div>
+
+    <!-- 常见说明 —— FAQ 摘要风格 -->
+    <div class="faq-block">
+        <h2 style="border-bottom: none; margin-top: 0; margin-bottom: 0.6rem;">一些常见的小问题</h2>
+        <dl>
+            <dt>需要很懂游戏才能看相关内容吗？</dt>
+            <dd>不必。很多讨论从基础概念开始，慢慢就会熟悉常用的术语。兴趣本身就是最好的引导。</dd>
+
+            <dt>「雷火电竞」的内容偏向哪一类？</dt>
+            <dd>它涵盖赛事信息、趋势观察和日常话题，风格克制，不制造对立，适合安静浏览与思考。</dd>
+
+            <dt>是否有固定的更新节奏？</dt>
+            <dd>内容会根据赛事周期和热点自然更新，没有硬性的推送频率，像一本不定期翻开的笔记本。</dd>
+
+            <dt>如何开始探索？</dt>
+            <dd>直接浏览 <a href="https://web-leihouesports.com">雷火电竞</a> 上的最近内容即可，不需要注册或订阅，打开即读。</dd>
+        </dl>
+    </div>
+
+    <!-- 简短提示 / 说明 -->
+    <p class="text-muted" style="margin-top: 2rem; font-size: 0.95rem;">
+        不论是赛前随手翻翻，还是赛后细细回味，保持自己的节奏就好。
+        竞技世界很大，总有一块角落让你觉得「原来还可以这样看」。
+    </p>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        <span>— 轻量阅读 · 无负担 —</span><br>
+        <span style="opacity: 0.6;">只提供视角，不兜售答案</span>
+    </div>
+</div>
+</body>
+</html>
